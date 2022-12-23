@@ -1,6 +1,13 @@
 # AES-Encrypt-Decrypt
 AES 암복호화 (Java 17에서 작성 함)
 
+SALT값은 반드시 변경해서 사용.
+```java
+private static final String SALT = "your-salt-value-here";
+
+```
+
+암호화 시 password는 상황에 맞게 변경해서 사용.
 ```java
     public static void main(String[] args) {
         //secretKey, salt 생성 용 
@@ -13,7 +20,7 @@ AES 암복호화 (Java 17에서 작성 함)
 
 
         //테스트
-        String password = "PU#w%#rq#!%+$/y)c4FlI/)uH{/QqlK#*+(iNC<(t>Y^e6u!jH>,ki}y0lhBrWia";
+        String password = "your-encrypt-password-here";
         String text = "가나다라마바사";
 
         String encrypt = encrypt(text, password);
